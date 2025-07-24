@@ -28,3 +28,11 @@ def grades_average(n):
         sum += grade
 
     return sum / n
+
+def max_and_min_num(n):
+    numbers = []
+    for i in range(n):
+        num = int(input('Ingrese el número: '))
+
+    return max(numbers), min(numbers)
+
