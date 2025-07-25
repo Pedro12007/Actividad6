@@ -19,7 +19,10 @@ def triangle_area(base, height):
     return (base*height)/2
 
 def is_even_number(num):
-    return num % 2 == 0
+    if num % 2 == 0:
+        return 'Es par'
+    else:
+        return 'Es impar'
 
 def grades_average(n):
     sum = 0
@@ -58,10 +61,15 @@ while True:
             print()
 
         case '2':
-            pass
+            base = float(input('Ingrese la base del triangulo (cm): '))
+            height = float(input('Ingrese la altura del triangulo (cm): '))
+            print(f'El area del triangulo es de: {triangle_area(base, height)}cm')
+            print()
 
         case '3':
-            pass
+            number = int(input('Ingrese el número: '))
+            print(is_even_number(number))
+
 
         case '4':
             pass
