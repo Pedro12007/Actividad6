@@ -1,7 +1,7 @@
-def average(sum, length):
+def average(sum=1, length=1):
     return sum / length
 
-def addition(n):
+def addition(n=1):
     sum = 0
     positive = 0
     negative = 0
@@ -15,16 +15,16 @@ def addition(n):
 
     return sum, positive, negative
 
-def triangle_area(base, height):
+def triangle_area(base=1, height=1):
     return (base*height)/2
 
-def is_even_number(num):
+def is_even_number(num=2):
     if num % 2 == 0:
         return 'Es par'
     else:
         return 'Es impar'
 
-def grades_average(n):
+def grades_average(n=1):
     sum = 0
     for i in range(n):
         grade = int(input('Ingrese las nota: '))
@@ -32,10 +32,11 @@ def grades_average(n):
 
     return sum / n
 
-def max_and_min_num(n):
+def max_and_min_num(n=1):
     numbers = []
     for i in range(n):
         num = int(input('Ingrese el número: '))
+        numbers.append(num)
 
     return max(numbers), min(numbers)
 
@@ -69,16 +70,24 @@ while True:
         case '3':
             number = int(input('Ingrese el número: '))
             print(is_even_number(number))
-
+            print()
 
         case '4':
-            pass
+            n = int(input('Ingrese la cantidad de notas: '))
+            print(f'El promedio de las notas es: {grades_average(n)}')
+            print()
 
         case '5':
-            pass
+            n = int(input('Ingrese la cantidad de números a evaluar: '))
+            max_and_min = max_and_min_num(n)
+            print(f'El número mayor es: {max_and_min[0]}')
+            print(f'El número menor es: {max_and_min[1]}')
+            print()
 
         case '6':
+            print('Saliendo del programa...')
             break
 
         case _:
             print('Opción inválida. Intente nuevamente.')
+            print()
